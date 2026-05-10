@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="so">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +13,14 @@
 
     <header class="fixed w-full z-50 bg-black/95 backdrop-blur-md py-3 border-b border-red-600/20">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <img src="71795.png" alt="Logo" class="w-10 h-10 rounded-full border border-red-600">
+            <div class="flex items-center gap-3">
+                <img src="71795.png" alt="SC Coffe Logo" class="w-10 h-10 rounded-full border border-red-600">
                 <h1 class="text-2xl font-black text-red-600 tracking-tighter italic">SC COFFE</h1>
             </div>
             <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-300">
                 <a href="#home" class="hover:text-red-500 transition">Home</a>
                 <a href="#menu" class="hover:text-red-500 transition">Menu</a>
-                <a href="#contact" class="bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition">Contact</a>
+                <a href="#contact" class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -28,83 +28,60 @@
     <section id="home" class="relative h-screen flex items-center justify-center text-center">
         <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600" class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="relative z-10 px-6">
-            <img src="71795.png" alt="Logo" class="w-40 h-40 mx-auto mb-6 rounded-full border-4 border-red-600 shadow-2xl">
+            <img src="71795.png" alt="SC Coffe" class="w-44 h-44 mx-auto mb-6 rounded-full border-4 border-red-600 shadow-2xl shadow-red-600/30">
             <h2 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter italic uppercase">SC <span class="text-red-600">COFFE</span></h2>
             <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-10 italic">"The Best Coffee Experience in Mogadishu, Somalia"</p>
             <div class="flex flex-wrap gap-4 justify-center">
                 <a href="https://wa.me/252614909575" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-bold flex items-center gap-2 transition shadow-lg shadow-green-600/20">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Order
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
     <section id="menu" class="py-24 bg-zinc-950 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h3 class="text-4xl font-black text-red-600 mb-16 text-center uppercase italic">Menu-ga SC Coffe</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Espresso</h4><p class="text-gray-500 text-xs italic">Kulul</p></div>
-                    <span class="text-red-600 font-black text-xl">$1.50</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Cappuccino</h4><p class="text-gray-500 text-xs italic">Kulul</p></div>
-                    <span class="text-red-600 font-black text-xl">$2.50</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Caffe Latte</h4><p class="text-gray-500 text-xs italic">Kulul</p></div>
-                    <span class="text-red-600 font-black text-xl">$2.00</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Caffe Mocha</h4><p class="text-gray-500 text-xs italic">Kulul</p></div>
-                    <span class="text-red-600 font-black text-xl">$3.00</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Americano</h4><p class="text-gray-500 text-xs italic">Kulul</p></div>
-                    <span class="text-red-600 font-black text-xl">$1.50</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Caramel Macchiato</h4><p class="text-gray-500 text-xs italic">Kulul</p></div>
-                    <span class="text-red-600 font-black text-xl">$3.50</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Flat White</h4><p class="text-gray-500 text-xs italic">Kulul</p></div>
-                    <span class="text-red-600 font-black text-xl">$2.50</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Iced Spanish Latte</h4><p class="text-blue-500 text-xs italic font-bold">Qabow</p></div>
-                    <span class="text-red-600 font-black text-xl">$3.50</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Iced Americano</h4><p class="text-blue-500 text-xs italic font-bold">Qabow</p></div>
-                    <span class="text-red-600 font-black text-xl">$2.00</span>
-                </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center">
-                    <div><h4 class="font-bold text-lg">Turkish Coffee</h4><p class="text-gray-500 text-xs italic">Kulul</p></div>
-                    <span class="text-red-600 font-black text-xl">$1.50</span>
-                </div>
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-4xl font-black text-red-600 mb-16 uppercase italic">Our Menu</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold">Espresso</h4><span class="text-red-600 font-black">$1.50</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold">Cappuccino</h4><span class="text-red-600 font-black">$2.50</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold">Caffe Latte</h4><span class="text-red-600 font-black">$2.00</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold">Caffe Mocha</h4><span class="text-red-600 font-black">$3.00</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold">Americano</h4><span class="text-red-600 font-black">$1.50</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold">Caramel Macchiato</h4><span class="text-red-600 font-black">$3.50</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold">Flat White</h4><span class="text-red-600 font-black">$2.50</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold text-blue-400">Iced Spanish Latte</h4><span class="text-red-600 font-black">$3.50</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold text-blue-400">Iced Americano</h4><span class="text-red-600 font-black">$2.00</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="font-bold">Turkish Coffee</h4><span class="text-red-600 font-black">$1.50</span></div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-24 bg-black border-t border-red-900/10 px-6 text-center">
         <div class="max-w-4xl mx-auto bg-zinc-900 p-12 rounded-[3rem] border border-zinc-800">
-            <h3 class="text-4xl font-black text-red-600 mb-8 italic uppercase">Nala Soo Xiriir</h3>
+            <h3 class="text-4xl font-black text-red-600 mb-12 italic uppercase">Contact Us</h3>
             <div class="grid md:grid-cols-2 gap-10 mb-12">
-                <div><p class="text-gray-500 text-xs font-bold uppercase">Email</p><p class="text-lg font-black">sahalck899@gmail.com</p></div>
-                <div><p class="text-gray-500 text-xs font-bold uppercase">Phone</p><p class="text-lg font-black">+252 61 490 9575</p></div>
+                <div class="space-y-2">
+                    <p class="text-gray-500 text-xs font-bold uppercase tracking-widest text-center">Official Email</p>
+                    <p class="text-lg font-black text-center">sahalck899@gmail.com</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-gray-500 text-xs font-bold uppercase tracking-widest text-center">Phone Support</p>
+                    <p class="text-lg font-black text-center">+252 61 490 9575</p>
+                </div>
             </div>
-            <div class="flex justify-center gap-10 text-4xl">
+            
+            <div class="flex justify-center gap-10 text-4xl pt-8 border-t border-zinc-800">
                 <a href="https://t.me/sahalckcoffe" target="_blank" class="text-blue-400 hover:text-white transition"><i class="fab fa-telegram"></i></a>
                 <a href="https://twitter.com/sahal24ck" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
                 <a href="https://wa.me/252614909575" target="_blank" class="text-green-500 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <p class="mt-10 text-gray-500 italic uppercase text-xs tracking-widest">Mogadishu, Somalia</p>
+            <p class="mt-10 text-gray-500 italic text-sm">Mogadishu, Somalia</p>
         </div>
     </section>
 
-    <footer class="py-10 text-center bg-zinc-950 border-t border-zinc-900 text-gray-700 text-[10px] uppercase tracking-widest italic">
-        © 2026 SC Coffe | Mogadishu, Somalia
+    <footer class="py-10 text-center bg-zinc-950 border-t border-zinc-900 text-gray-700 text-[10px] uppercase tracking-widest">
+        © 2026 SC Coffe | Mogadishu Hub
     </footer>
 
 </body>
