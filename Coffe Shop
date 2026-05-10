@@ -1,0 +1,50 @@
+index.html
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maandeeq Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Maandeeq <span>Coffee</span></div>
+            <ul>
+                <li><a href="#">Hoyga</a></li>
+                <li><a href="#">Menu-ga</a></li>
+                <li><a href="#">Nagu saabsan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ku soo dhawaada Kafeega Ugu Macaan!</h1>
+            <p>Kaalay oo dhadhami kafeega dabiiciga ah ee laga soo guray beeraha Soomaaliya.</p>
+            <a href="#" class="btn">Dalbo Hadda</a>
+        </div>
+    </section>
+
+    <section class="menu">
+        <h2>Menu-ga Maanta</h2>
+        <div class="menu-items">
+            <div class="item">
+                <h3>Espresso</h3>
+                <p>$2.50</p>
+            </div>
+            <div class="item">
+                <h3>Cappuccino</h3>
+                <p>$3.50</p>
+            </div>
+            <div class="item">
+                <h3>Latte</h3>
+                <p>$4.00</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
