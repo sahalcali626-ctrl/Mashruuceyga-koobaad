@@ -1,0 +1,15 @@
+{
+  "name": "SAHAL22 Coffee Design",
+  "short_name": "SAHAL22",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#dc2626",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/924/924514.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
