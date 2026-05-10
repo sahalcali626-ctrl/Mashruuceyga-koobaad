@@ -3,47 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maandeeq Coffee Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SAHAL22 | Modern Coffee Designs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-black text-white font-sans scroll-smooth">
 
-    <header>
-        <nav>
-            <div class="logo">Maandeeq <span>Coffee</span></div>
-            <ul>
-                <li><a href="#">Hoyga</a></li>
-                <li><a href="#">Menu-ga</a></li>
-                <li><a href="#">Nagu saabsan</a></li>
-            </ul>
-        </nav>
+    <header class="fixed w-full z-50 bg-black/90 backdrop-blur-sm py-4 border-b border-red-600/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-3xl font-black text-red-600 tracking-tighter">SAHAL22</h1>
+            <nav class="hidden md:flex gap-8 text-sm font-bold uppercase">
+                <a href="#home" class="hover:text-red-500 transition">Home</a>
+                <a href="#designs" class="hover:text-red-500 transition">Designs</a>
+                <a href="#contact" class="bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition">Contact Us</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Ku soo dhawaada Kafeega Ugu Macaan!</h1>
-            <p>Kaalay oo dhadhami kafeega dabiiciga ah ee laga soo guray beeraha Soomaaliya.</p>
-            <a href="#" class="btn">Dalbo Hadda</a>
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600" class="absolute inset-0 w-full h-full object-cover opacity-50">
+        <div class="relative z-10 text-center px-6">
+            <h2 class="text-5xl md:text-8xl font-black mb-4">SAHAL<span class="text-red-600">22</span></h2>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-10 italic">
+                "Modern Coffee Shop Designs iyo Boorar heer sare ah."
+            </p>
+            <a href="#designs" class="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-xl text-lg font-bold transition transform hover:scale-110 inline-block shadow-lg shadow-red-600/40">
+                Explore Our Designs
+            </a>
         </div>
     </section>
 
-    <section class="menu">
-        <h2>Menu-ga Maanta</h2>
-        <div class="menu-items">
-            <div class="item">
-                <h3>Espresso</h3>
-                <p>$2.50</p>
+    <section id="designs" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-black text-red-600 uppercase">Featured Designs</h3>
+                <div class="h-1 w-24 bg-red-600 mx-auto mt-4"></div>
             </div>
-            <div class="item">
-                <h3>Cappuccino</h3>
-                <p>$3.50</p>
-            </div>
-            <div class="item">
-                <h3>Latte</h3>
-                <p>$4.00</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600/50 transition">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2">Modern Lounge</h4>
+                        <p class="text-gray-400 text-sm">Naqshad diiran oo ku habboon meelaha lagu raaxaysto.</p>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600/50 transition">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2">Luxury Branding</h4>
+                        <p class="text-gray-400 text-sm">Muuqaal premium ah oo loogu talagalay coffee-yada qaaliga ah.</p>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600/50 transition">
+                    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2">Elegant Billboard</h4>
+                        <p class="text-gray-400 text-sm">Design boor ah oo soo jiidanaya macaamiisha.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <section id="contact" class="py-24 bg-black">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-zinc-900 p-10 rounded-[2rem] border border-red-600/20 shadow-2xl">
+                <h3 class="text-4xl font-black text-red-600 mb-6 text-center">Nala Soo Xiriir</h3>
+                <p class="text-center text-gray-400 mb-10">Nagala soo xiriir halkan si aan kuugu sameyno naqshad casri ah.</p>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Magacaaga" class="w-full bg-black border border-zinc-700 rounded-xl px-5 py-4 focus:border-red-600 outline-none transition text-white">
+                        <input type="email" placeholder="Email-kaaga" class="w-full bg-black border border-zinc-700 rounded-xl px-5 py-4 focus:border-red-600 outline-none transition text-white">
+                    </div>
+                    <textarea rows="5" placeholder="Fariintaada..." class="w-full bg-black border border-zinc-700 rounded-xl px-5 py-4 focus:border-red-600 outline-none transition text-white"></textarea>
+                    <button class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-red-600/20 uppercase tracking-widest">
+                        Soo Dir Fariinta
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-zinc-800">
+        <p class="text-gray-500 font-bold uppercase tracking-tighter">© 2026 SAHAL22 | Design Agency</p>
+    </footer>
 
 </body>
 </html>
