@@ -3,99 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SC Coffe | Mogadishu's Finest</title>
+    <title>SC Coffe | Mogadishu Hub</title>
     <link rel="icon" type="image/png" href="71795.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-black text-white font-sans scroll-smooth">
+<body class="bg-[#050505] text-white font-sans scroll-smooth">
 
-    <header class="fixed w-full z-50 bg-black/95 backdrop-blur-md py-3 border-b border-red-600/20">
+    <header class="fixed w-full z-50 bg-black/90 backdrop-blur-md py-4 border-b border-red-600/30">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="71795.png" alt="Logo" class="w-10 h-10 rounded-full border border-red-600">
-                <h1 class="text-2xl font-black text-red-600 tracking-tighter italic">SC COFFE</h1>
+                <h1 class="text-2xl font-black text-red-600 italic">SC COFFE</h1>
             </div>
-            <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-300">
+            <nav class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
                 <a href="#home" class="hover:text-red-500 transition">Home</a>
                 <a href="#menu" class="hover:text-red-500 transition">Menu</a>
-                <a href="#tools" class="hover:text-red-500 transition">Services</a>
-                <a href="#contact" class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition">Contact</a>
+                <a href="#services" class="hover:text-red-500 transition">Services</a>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="relative h-screen flex items-center justify-center text-center">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600" class="absolute inset-0 w-full h-full object-cover opacity-20">
+    <section id="home" class="relative h-[80vh] flex items-center justify-center text-center">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600')] bg-cover bg-center opacity-20"></div>
         <div class="relative z-10 px-6">
-            <img src="71795.png" alt="SC Coffe" class="w-40 h-40 mx-auto mb-6 rounded-full border-4 border-red-600 shadow-2xl">
-            <h2 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter italic uppercase">SC <span class="text-red-600">COFFE</span></h2>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-400 mb-10 italic">"The Best Coffee Experience in Mogadishu, Somalia"</p>
+            <img src="71795.png" alt="SC Coffe" class="w-32 h-32 mx-auto mb-8 rounded-full border-2 border-red-600 shadow-[0_0_50px_rgba(220,38,38,0.2)]">
+            <h2 class="text-5xl md:text-7xl font-black mb-4 italic uppercase tracking-tighter">SC <span class="text-red-600">COFFE</span></h2>
+            <p class="text-lg text-gray-400 italic">The Best Coffee Experience in Mogadishu</p>
         </div>
     </section>
 
-    <section id="tools" class="py-24 bg-zinc-900 px-6 border-y border-zinc-800">
-        <div class="max-w-7xl mx-auto text-center">
-            <h3 class="text-4xl font-black text-red-600 mb-16 uppercase italic">Our Services</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <a href="https://wa.me/252614909575?text=Asc%20Sahal,%20waxaan%20rabaa%20inaan%20la%20socdo%20dalabkeyga" target="_blank" class="bg-black p-8 rounded-3xl border border-zinc-800 hover:border-red-600 transition group block">
-                    <i class="fas fa-truck text-4xl text-red-600 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4 uppercase text-white">Track Order</h4>
-                    <p class="text-gray-500 text-sm italic">Click to track your coffee delivery via WhatsApp.</p>
-                </a>
-
-                <a href="https://wa.me/252614909575?text=Asc%20Sahal,%20waxaan%20rabaa%20inaan%20is-qoro%20todobaad-le" target="_blank" class="bg-black p-8 rounded-3xl border border-zinc-800 hover:border-red-600 transition group block">
-                    <i class="fas fa-calendar-alt text-4xl text-red-600 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4 uppercase text-white">Subscription</h4>
-                    <p class="text-gray-500 text-sm italic">Get your favorite beans delivered every week.</p>
-                </a>
-
-                <a href="https://wa.me/252614909575?text=Asc%20Sahal,%20waa%20meeqa%20dhibcaheyga%20kafeega?" target="_blank" class="bg-black p-8 rounded-3xl border border-zinc-800 hover:border-red-600 transition group block">
-                    <i class="fas fa-gift text-4xl text-red-600 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4 uppercase text-white">Loyalty Points</h4>
-                    <p class="text-gray-500 text-sm italic">Earn points with every cup and get free coffee.</p>
-                </a>
-
-            </div>
+    <section id="services" class="py-20 bg-zinc-950 px-6">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="https://wa.me/252614909575?text=Asc%20Sahal,%20waxaan%20rabaa%20inaan%20la%20socdo%20dalabkeyga" target="_blank" class="p-8 bg-zinc-900 rounded-2xl border border-zinc-800 hover:border-red-600 transition group text-center">
+                <i class="fas fa-truck text-3xl text-red-600 mb-4"></i>
+                <h4 class="font-bold uppercase mb-2">Track Order</h4>
+                <p class="text-xs text-gray-500 italic">Chat on WhatsApp to track.</p>
+            </a>
+            <a href="https://wa.me/252614909575?text=Asc%20Sahal,%20waxaan%20rabaa%20is-qorista%20todobaadlaha" target="_blank" class="p-8 bg-zinc-900 rounded-2xl border border-zinc-800 hover:border-red-600 transition group text-center">
+                <i class="fas fa-calendar-check text-3xl text-red-600 mb-4"></i>
+                <h4 class="font-bold uppercase mb-2">Subscription</h4>
+                <p class="text-xs text-gray-500 italic">Weekly coffee delivery.</p>
+            </a>
+            <a href="https://wa.me/252614909575?text=Asc%20Sahal,%20meeqa%20dhibco%20ayaa%20ii%20hura?" target="_blank" class="p-8 bg-zinc-900 rounded-2xl border border-zinc-800 hover:border-red-600 transition group text-center">
+                <i class="fas fa-star text-3xl text-red-600 mb-4"></i>
+                <h4 class="font-bold uppercase mb-2">Loyalty</h4>
+                <p class="text-xs text-gray-500 italic">Earn points with each cup.</p>
+            </a>
         </div>
     </section>
 
-    <section id="menu" class="py-24 bg-zinc-950 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <h3 class="text-4xl font-black text-red-600 mb-16 uppercase italic">Our Menu</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4>Espresso</h4><span class="text-red-600 font-black">$1.50</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4>Cappuccino</h4><span class="text-red-600 font-black">$2.50</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4>Caffe Latte</h4><span class="text-red-600 font-black">$2.00</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4>Caffe Mocha</h4><span class="text-red-600 font-black">$3.00</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4>Americano</h4><span class="text-red-600 font-black">$1.50</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4>Caramel Macchiato</h4><span class="text-red-600 font-black">$3.50</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4>Flat White</h4><span class="text-red-600 font-black">$2.50</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4 class="text-blue-400 font-bold">Iced Spanish Latte</h4><span class="text-red-600 font-black">$3.50</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4 class="text-blue-400 font-bold">Iced Americano</h4><span class="text-red-600 font-black">$2.00</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center text-white"><h4>Turkish Coffee</h4><span class="text-red-600 font-black">$1.50</span></div>
-            </div>
+    <section id="menu" class="py-20 bg-black px-6 text-center">
+        <h3 class="text-3xl font-black text-red-600 mb-12 uppercase italic">Our Menu</h3>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+            <div class="flex justify-between p-4 bg-zinc-900/50 rounded-xl border border-zinc-800"><span>Espresso</span><span class="text-red-500 font-bold">$1.50</span></div>
+            <div class="flex justify-between p-4 bg-zinc-900/50 rounded-xl border border-zinc-800"><span>Cappuccino</span><span class="text-red-500 font-bold">$2.50</span></div>
+            <div class="flex justify-between p-4 bg-zinc-900/50 rounded-xl border border-zinc-800"><span>Caffe Latte</span><span class="text-red-500 font-bold">$2.00</span></div>
+            <div class="flex justify-between p-4 bg-zinc-900/50 rounded-xl border border-zinc-800"><span class="text-blue-400">Iced Spanish Latte</span><span class="text-red-500 font-bold">$3.50</span></div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-black border-t border-red-900/10 px-6 text-center">
-        <div class="max-w-4xl mx-auto bg-zinc-900 p-12 rounded-[3rem] border border-zinc-800">
-            <h3 class="text-4xl font-black text-red-600 mb-12 italic uppercase">Contact Us</h3>
-            <div class="flex justify-center gap-10 text-4xl">
-                <a href="https://t.me/sahalckcoffe" target="_blank" class="text-blue-400 hover:text-white transition"><i class="fab fa-telegram"></i></a>
-                <a href="https://x.com/Sahal24ck" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://wa.me/252614909575" target="_blank" class="text-green-500 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <div class="mt-10 text-gray-500">
-                <p>sahalck899@gmail.com</p>
-                <p>+252 61 490 9575</p>
-            </div>
+    <footer class="py-20 bg-zinc-950 border-t border-zinc-900 text-center px-6">
+        <div class="flex justify-center gap-8 text-3xl mb-10">
+            <a href="https://t.me/sahalckcoffe" target="_blank" class="text-zinc-500 hover:text-blue-400 transition"><i class="fab fa-telegram"></i></a>
+            <a href="https://x.com/Sahal24ck" target="_blank" class="text-zinc-500 hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://wa.me/252614909575" target="_blank" class="text-zinc-500 hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
         </div>
-    </section>
-
-    <footer class="py-10 text-center bg-zinc-950 text-gray-700 text-[10px] uppercase tracking-widest italic">
-        © 2026 SC Coffe | Mogadishu Hub
+        <p class="text-[10px] text-zinc-600 uppercase tracking-widest italic">© 2026 SC Coffe | Mogadishu Hub</p>
     </footer>
 
 </body>
