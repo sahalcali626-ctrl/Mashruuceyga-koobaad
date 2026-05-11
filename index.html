@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC Coffe | Mogadishu's Finest</title>
     <link rel="icon" type="image/png" href="71795.png">
-    <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -14,23 +13,47 @@
     <header class="fixed w-full z-50 bg-black/95 backdrop-blur-md py-3 border-b border-red-600/20">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="71795.png" alt="SC Coffe Logo" class="w-10 h-10 rounded-full border border-red-600">
+                <img src="71795.png" alt="Logo" class="w-10 h-10 rounded-full border border-red-600">
                 <h1 class="text-2xl font-black text-red-600 tracking-tighter italic">SC COFFE</h1>
             </div>
             <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-300">
                 <a href="#home" class="hover:text-red-500 transition">Home</a>
                 <a href="#menu" class="hover:text-red-500 transition">Menu</a>
+                <a href="#tools" class="hover:text-red-500 transition">Our Services</a>
                 <a href="#contact" class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition">Contact Us</a>
             </nav>
         </div>
     </header>
 
     <section id="home" class="relative h-screen flex items-center justify-center text-center">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600" class="absolute inset-0 w-full h-full object-cover opacity-20">
         <div class="relative z-10 px-6">
-            <img src="71795.png" alt="SC Coffe" class="w-44 h-44 mx-auto mb-6 rounded-full border-4 border-red-600 shadow-2xl">
+            <img src="71795.png" alt="SC Coffe" class="w-40 h-40 mx-auto mb-6 rounded-full border-4 border-red-600 shadow-2xl">
             <h2 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter italic uppercase">SC <span class="text-red-600">COFFE</span></h2>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-10 italic">"The Best Coffee Experience in Mogadishu, Somalia"</p>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-400 mb-10 italic">"The Best Coffee Experience in Mogadishu, Somalia"</p>
+        </div>
+    </section>
+
+    <section id="tools" class="py-24 bg-zinc-900 px-6 border-y border-zinc-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-4xl font-black text-red-600 mb-16 uppercase italic italic">Our Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-black p-8 rounded-3xl border border-zinc-800 hover:border-red-600 transition group">
+                    <i class="fas fa-truck text-4xl text-red-600 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Track Order</h4>
+                    <p class="text-gray-500 text-sm italic">Track your coffee delivery in real-time within Mogadishu.</p>
+                </div>
+                <div class="bg-black p-8 rounded-3xl border border-zinc-800 hover:border-red-600 transition group">
+                    <i class="fas fa-calendar-alt text-4xl text-red-600 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Subscription</h4>
+                    <p class="text-gray-500 text-sm italic">Get your favorite beans delivered every week to your door.</p>
+                </div>
+                <div class="bg-black p-8 rounded-3xl border border-zinc-800 hover:border-red-600 transition group">
+                    <i class="fas fa-gift text-4xl text-red-600 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Loyalty Points</h4>
+                    <p class="text-gray-500 text-sm italic">Earn points with every cup and get free coffee on Fridays.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -45,8 +68,8 @@
                 <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4>Americano</h4><span class="text-red-600 font-black">$1.50</span></div>
                 <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4>Caramel Macchiato</h4><span class="text-red-600 font-black">$3.50</span></div>
                 <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4>Flat White</h4><span class="text-red-600 font-black">$2.50</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="text-blue-400">Iced Spanish Latte</h4><span class="text-red-600 font-black">$3.50</span></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="text-blue-400">Iced Americano</h4><span class="text-red-600 font-black">$2.00</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="text-blue-400 font-bold">Iced Spanish Latte</h4><span class="text-red-600 font-black">$3.50</span></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4 class="text-blue-400 font-bold">Iced Americano</h4><span class="text-red-600 font-black">$2.00</span></div>
                 <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 flex justify-between items-center"><h4>Turkish Coffee</h4><span class="text-red-600 font-black">$1.50</span></div>
             </div>
         </div>
@@ -54,10 +77,10 @@
 
     <section id="contact" class="py-24 bg-black border-t border-red-900/10 px-6 text-center">
         <div class="max-w-4xl mx-auto bg-zinc-900 p-12 rounded-[3rem] border border-zinc-800 shadow-2xl">
-            <h3 class="text-4xl font-black text-red-600 mb-8 italic uppercase">Contact Us</h3>
-            <div class="space-y-4 mb-10">
-                <p class="text-lg font-black text-center">Email: sahalck899@gmail.com</p>
-                <p class="text-lg font-black text-center">Phone: +252 61 490 9575</p>
+            <h3 class="text-4xl font-black text-red-600 mb-12 italic uppercase">Contact Us</h3>
+            <div class="grid md:grid-cols-2 gap-10 mb-12">
+                <div class="text-center"><p class="text-gray-500 text-xs font-bold uppercase">Official Email</p><p class="text-lg font-black">sahalck899@gmail.com</p></div>
+                <div class="text-center"><p class="text-gray-500 text-xs font-bold uppercase">Phone Support</p><p class="text-lg font-black">+252 61 490 9575</p></div>
             </div>
             
             <div class="flex justify-center gap-10 text-4xl pt-8 border-t border-zinc-800">
