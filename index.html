@@ -4,91 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC Coffe | Mogadishu Hub</title>
-    <link rel="icon" type="image/png" href="71795.png">
- <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
-<link rel="apple-touch-icon" href="71795.png">
-   <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-       <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#000000">
     <link rel="apple-touch-icon" href="71795.png">
- <style>
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); backdrop-blur: 5px; }
-        .modal-content { background-color: #0a0a0a; margin: 15% auto; padding: 40px; border: 2px solid #dc2626; width: 90%; max-width: 500px; border-radius: 30px; text-align: center; box-shadow: 0 0 50px rgba(220,38,38,0.3); }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); }
+        .modal-content { background-color: #111; margin: 15% auto; padding: 30px; border: 1px solid #dc2626; width: 90%; max-width: 500px; border-radius: 20px; text-align: center; }
     </style>
 </head>
-<body class="bg-[#050505] text-white font-sans scroll-smooth">
-
-    <header class="fixed w-full z-50 bg-black/90 backdrop-blur-md py-4 border-b border-red-600/30">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="71795.png" class="w-10 h-10 rounded-full border border-red-600">
-                <h1 class="text-2xl font-black text-red-600 italic uppercase">SC COFFE</h1>
-            </div>
-            <nav class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                <a href="#home" class="hover:text-red-500 transition">Home</a>
-                <a href="#menu" class="hover:text-red-500 transition">Menu</a>
-            </nav>
-        </div>
-    </header>
-
-    <section id="home" class="relative h-[50vh] flex items-center justify-center text-center">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600')] bg-cover bg-center opacity-20"></div>
-        <div class="relative z-10 px-6 pt-20">
-            <h2 class="text-6xl font-black italic uppercase tracking-tighter">SC <span class="text-red-600">COFFE</span></h2>
-            <p class="text-gray-400 italic mt-2 text-xl">The Best in Mogadishu</p>
-        </div>
-    </section>
-
-    <section id="menu" class="py-20 bg-black px-6">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-3xl font-black text-red-600 mb-10 text-center uppercase italic">Our Special Menu (10)</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <button onclick="openModal('Espresso', 'Pure dark beans.', 'Instantly wakes up your brain and sharpens focus.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span>1. Espresso</span><span class="text-red-500 font-bold">$1.50</span></button>
-                <button onclick="openModal('Cappuccino', 'Espresso and steamed milk.', 'Calms anxiety and provides a smooth relaxation.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span>2. Cappuccino</span><span class="text-red-500 font-bold">$2.50</span></button>
-                <button onclick="openModal('Iced Spanish Latte', 'Cold milk and condensed milk.', 'Refreshes the mind and reduces daily stress.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span class="text-blue-400">3. Iced Spanish Latte</span><span class="text-red-500 font-bold">$3.50</span></button>
-                <button onclick="openModal('Caffe Latte', 'Espresso and extra milk.', 'Provides a gentle energy boost without the jitters.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span>4. Caffe Latte</span><span class="text-red-500 font-bold">$2.00</span></button>
-                <button onclick="openModal('Americano', 'Espresso with hot water.', 'Clears mental fog and improves morning productivity.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span>5. Americano</span><span class="text-red-500 font-bold">$1.50</span></button>
-                <button onclick="openModal('Mocha', 'Chocolate and espresso.', 'Triggers serotonin to boost your mood and happiness.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span>6. Caffe Mocha</span><span class="text-red-500 font-bold">$3.00</span></button>
-                <button onclick="openModal('Caramel Macchiato', 'Vanilla and caramel blend.', 'Gives a sweet mental reward and satisfaction.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span>7. Caramel Macchiato</span><span class="text-red-500 font-bold">$3.50</span></button>
-                <button onclick="openModal('Turkish Coffee', 'Traditional ground coffee.', 'Deep aroma that helps in grounding and meditation.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span>8. Turkish Coffee</span><span class="text-red-500 font-bold">$1.50</span></button>
-                <button onclick="openModal('Flat White', 'Micro-foamed milk.', 'A smooth drink for a quiet, peaceful mind.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span>9. Flat White</span><span class="text-red-500 font-bold">$2.50</span></button>
-                <button onclick="openModal('Iced Americano', 'Cold water and espresso.', 'Instant mental refresh during hot Mogadishu days.')" class="flex justify-between p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 hover:border-red-600 transition"><span class="text-blue-400">10. Iced Americano</span><span class="text-red-500 font-bold">$2.00</span></button>
-            </div>
+<body class="bg-[#050505] text-white">
+    <section class="py-20 text-center">
+        <h1 class="text-4xl font-black text-red-600 mb-10">SC COFFE MENU</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 max-w-2xl mx-auto">
+            <button onclick="openModal('Espresso', 'Pure coffee beans.', 'Sharpens your focus.')" class="p-4 bg-zinc-900 border border-zinc-800 rounded-xl">1. Espresso</button>
+            <button onclick="openModal('Cappuccino', 'Milk and espresso.', 'Relaxes your mind.')" class="p-4 bg-zinc-900 border border-zinc-800 rounded-xl">2. Cappuccino</button>
         </div>
     </section>
 
     <div id="infoModal" class="modal">
         <div class="modal-content">
-            <h4 id="modalTitle" class="text-3xl font-black text-red-600 mb-4 uppercase italic"></h4>
-            <p class="text-gray-300 mb-6 text-lg" id="modalBody"></p>
-            <div class="bg-zinc-900 p-4 rounded-2xl border border-red-900/30 mb-8">
-                <p class="text-red-500 font-bold uppercase text-xs mb-2 tracking-widest text-center">Brain Benefit</p>
-                <p class="italic text-white" id="modalBenefit"></p>
-            </div>
-            <button onclick="closeModal()" class="w-full bg-red-600 text-white py-4 rounded-xl font-bold uppercase hover:bg-red-700 transition">Close</button>
+            <h4 id="modalTitle" class="text-xl text-red-600 font-bold mb-2"></h4>
+            <p id="modalBody" class="mb-2"></p>
+            <p id="modalBenefit" class="italic text-gray-400 text-sm"></p>
+            <button onclick="closeModal()" class="mt-4 bg-red-600 px-4 py-2 rounded">Close</button>
         </div>
     </div>
 
-    <footer class="py-20 bg-zinc-950 text-center border-t border-zinc-900">
-        <div class="flex justify-center gap-12 text-4xl mb-10">
-            <a href="https://x.com/Sahal24ck" target="_blank" class="text-zinc-600 hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://wa.me/252614909575" target="_blank" class="text-zinc-600 hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <p class="text-[10px] text-zinc-700 uppercase tracking-[0.4em] italic">© 2026 SC Coffe | Sahal24ck</p>
-    </footer>
-
     <script>
-        function openModal(title, body, benefit) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalBody').innerText = body;
-            document.getElementById('modalBenefit').innerText = benefit;
+        function openModal(t, b, f) {
+            document.getElementById('modalTitle').innerText = t;
+            document.getElementById('modalBody').innerText = b;
+            document.getElementById('modalBenefit').innerText = f;
             document.getElementById('infoModal').style.display = "block";
         }
-        function closeModal() {
-            document.getElementById('infoModal').style.display = "none";
-        }
+        function closeModal() { document.getElementById('infoModal').style.display = "none"; }
     </script>
 </body>
 </html>
