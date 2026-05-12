@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SC Coffe | WAAFI Integrated</title>
+    <title>SC Coffe | Real App Experience</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#dc2626">
     <link rel="apple-touch-icon" href="71795.png">
@@ -29,7 +29,7 @@
         </div>
         <div class="flex gap-4 items-center">
             <span class="bg-zinc-900 px-3 py-1 rounded-full text-[10px] border border-zinc-800 text-zinc-400">
-                <i class="fas fa-star text-yellow-500 mr-1"></i> 120 Pts
+                <i class="fas fa-star text-yellow-500 mr-1"></i> <span id="user-pts">120</span> Pts
             </span>
             <i class="fas fa-user-circle text-2xl text-zinc-600"></i>
         </div>
@@ -40,120 +40,144 @@
         <div class="glass p-5 rounded-[2rem] border-t border-white/10 relative overflow-hidden">
             <div class="relative z-10">
                 <p class="text-xs text-zinc-500 font-bold uppercase mb-1">Dhibcahaaga (Loyalty)</p>
-                <h2 class="text-3xl font-black mb-4">4 <span class="text-sm font-normal text-zinc-500">/ 5 Koob</span></h2>
+                <h2 class="text-3xl font-black mb-4"><span id="cup-count">4</span> <span class="text-sm font-normal text-zinc-500">/ 5 Koob</span></h2>
                 <div class="w-full bg-zinc-800 h-2 rounded-full overflow-hidden">
-                    <div class="bg-red-600 h-full w-[80%]"></div>
+                    <div id="progress-bar" class="bg-red-600 h-full w-[80%] transition-all duration-500"></div>
                 </div>
-                <p class="text-[10px] mt-2 text-zinc-400 italic">1 Koob oo kale cab si aad u hesho mid BILAASH ah!</p>
+                <p id="loyalty-msg" class="text-[10px] mt-2 text-zinc-400 italic">1 Koob oo kale cab si aad u hesho mid BILAASH ah!</p>
             </div>
-            <div class="absolute -right-5 -bottom-5 text-zinc-900 text-8xl rotate-12"><i class="fas fa-mug-hot"></i></div>
-        </div>
-    </section>
-
-    <!-- WAAFI Integration Section -->
-    <section class="px-6 mb-8">
-        <div class="bg-zinc-900/50 border border-zinc-800 p-5 rounded-2xl">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                    <span class="text-green-600 font-black text-xs">WF</span>
-                </div>
-                <h3 class="font-bold text-sm">WAAFI Payment Ready</h3>
-            </div>
-            <p class="text-xs text-zinc-500 mb-4">Ku bixi lacagta si fudud adigoo isticmaalaya WAAFI ama EVC Plus.</p>
-            <button class="waafi-btn w-full py-3 rounded-xl text-xs font-bold uppercase flex items-center justify-center gap-2">
-                <i class="fas fa-shield-alt"></i> Ku xir Koontada WAAFI
-            </button>
         </div>
     </section>
 
     <!-- Menu -->
     <main class="px-6">
-        <div class="flex justify-between items-center mb-6">
-            <h2 class="text-lg font-bold">Menu-ga Casriga ah</h2>
-            <i class="fas fa-sliders-h text-zinc-600"></i>
-        </div>
-        
+        <h2 class="text-lg font-bold mb-6">Menu-ga Casriga ah</h2>
         <div class="space-y-4">
-            <!-- Item 1 -->
-            <div onclick="openM('Iced Spanish Latte', 'Condensed milk, espresso & ice.', 'Wuxuu dejiyaa stress-ka maskaxda.')" class="glass p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-16 h-16 bg-zinc-900 rounded-xl flex items-center justify-center text-2xl">🧊</div>
+            <div onclick="openM('Iced Spanish Latte', 'Condensed milk & espresso.', '$3.50')" class="glass p-4 rounded-2xl flex items-center gap-4 cursor-pointer">
+                <div class="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center text-xl">🧊</div>
                 <div class="flex-1">
                     <h4 class="font-bold text-sm">Iced Spanish Latte</h4>
                     <p class="text-[10px] text-zinc-500">Popular Choice</p>
                 </div>
                 <div class="text-right">
                     <p class="font-black text-red-500">$3.50</p>
-                    <button class="text-[10px] bg-red-600/10 text-red-500 px-2 py-1 rounded-md mt-1 font-bold">DALBO</button>
+                    <button class="text-[8px] bg-red-600/10 text-red-500 px-3 py-1 rounded-md mt-1 font-bold">DALBO</button>
                 </div>
             </div>
 
-            <!-- Item 2 -->
-            <div onclick="openM('Caramel Macchiato', 'Vanilla, steamed milk & caramel.', 'Wuxuu kiciyaa dareenka farxadda.')" class="glass p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-16 h-16 bg-zinc-900 rounded-xl flex items-center justify-center text-2xl">🍯</div>
+            <div onclick="openM('Caramel Macchiato', 'Vanilla & caramel latte.', '$3.50')" class="glass p-4 rounded-2xl flex items-center gap-4 cursor-pointer">
+                <div class="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center text-xl">🍯</div>
                 <div class="flex-1">
                     <h4 class="font-bold text-sm">Caramel Macchiato</h4>
                     <p class="text-[10px] text-zinc-500">Sweet & Creamy</p>
                 </div>
                 <div class="text-right">
                     <p class="font-black text-red-500">$3.50</p>
-                    <button class="text-[10px] bg-red-600/10 text-red-500 px-2 py-1 rounded-md mt-1 font-bold">DALBO</button>
+                    <button class="text-[8px] bg-red-600/10 text-red-500 px-3 py-1 rounded-md mt-1 font-bold">DALBO</button>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Customer Support & Quick Links -->
-    <section class="p-6 grid grid-cols-2 gap-4 mt-4">
-        <div class="glass p-4 rounded-2xl text-center">
-            <i class="fas fa-headset text-red-500 mb-2"></i>
-            <p class="text-[10px] font-bold uppercase">Help Center</p>
-        </div>
-        <div class="glass p-4 rounded-2xl text-center">
-            <i class="fas fa-history text-zinc-500 mb-2"></i>
-            <p class="text-[10px] font-bold uppercase">History</p>
+    <!-- History Section -->
+    <section class="p-6">
+        <h2 class="text-xs font-bold text-zinc-600 uppercase mb-4">Dalabaadkii Hore</h2>
+        <div id="order-history" class="space-y-2">
+            <p class="text-[10px] text-zinc-700 italic">Wali wax dalab ah ma jiro.</p>
         </div>
     </section>
 
     <!-- Modal -->
     <div id="modal" class="modal">
         <div class="modal-content text-center">
-            <div class="w-16 h-16 bg-red-600/10 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                <i class="fas fa-coffee"></i>
-            </div>
             <h4 id="mT" class="text-xl font-black mb-2 uppercase"></h4>
             <p id="mB" class="text-zinc-500 text-xs mb-4"></p>
             <div class="bg-zinc-900 p-4 rounded-2xl mb-6">
-                <p class="text-[10px] text-red-500 font-bold uppercase mb-1">Faa'iidada</p>
-                <p id="mF" class="text-sm italic"></p>
+                <p id="mP" class="text-lg font-black text-white"></p>
             </div>
             <div class="flex gap-2">
-                <button onclick="closeM()" class="flex-1 bg-zinc-800 py-3 rounded-xl font-bold text-xs">XIR</button>
-                <button class="flex-[2] waafi-btn py-3 rounded-xl font-bold text-xs uppercase flex items-center justify-center gap-2">
-                    <i class="fas fa-shopping-cart"></i> Ku bixi WAAFI
+                <button onclick="closeM()" class="flex-1 bg-zinc-800 py-3 rounded-xl font-bold text-xs text-zinc-500">XIR</button>
+                <button onclick="executeOrder()" class="flex-[2] waafi-btn py-3 rounded-xl font-bold text-xs uppercase">
+                   Confirm Order
                 </button>
             </div>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed bottom-6 left-6 right-6 glass border border-white/10 p-4 rounded-[2rem] flex justify-around items-center z-50 shadow-2xl">
+    <nav class="fixed bottom-6 left-6 right-6 glass border border-white/10 p-4 rounded-[2rem] flex justify-around items-center z-50">
         <i class="fas fa-home text-red-600"></i>
-        <i class="fas fa-search text-zinc-600"></i>
-        <div class="bg-red-600 w-12 h-12 rounded-full flex items-center justify-center -mt-12 border-4 border-[#050505] shadow-xl shadow-red-600/40">
-            <i class="fas fa-qrcode text-white"></i>
+        <i class="fas fa-history text-zinc-600" onclick="alert('History-gaaga hoos ayuu ku yaallaa!')"></i>
+        <div class="bg-red-600 w-12 h-12 rounded-full flex items-center justify-center -mt-12 border-4 border-[#050505]">
+            <i class="fas fa-shopping-cart text-white"></i>
         </div>
         <i class="fas fa-heart text-zinc-600"></i>
         <i class="fas fa-cog text-zinc-600"></i>
     </nav>
 
     <script>
-        function openM(t, b, f) {
+        let selectedItem = {};
+        const WHATSAPP_NUM = "252614909575";
+
+        // Database Initialization
+        let points = localStorage.getItem('pts') || 120;
+        let cups = localStorage.getItem('cups') || 4;
+        let history = JSON.parse(localStorage.getItem('history')) || [];
+
+        function updateUI() {
+            document.getElementById('user-pts').innerText = points;
+            document.getElementById('cup-count').innerText = cups;
+            document.getElementById('progress-bar').style.width = (cups * 20) + "%";
+            
+            const historyDiv = document.getElementById('order-history');
+            if(history.length > 0) {
+                historyDiv.innerHTML = history.map(item => `
+                    <div class="glass p-3 rounded-xl flex justify-between text-[10px]">
+                        <span>${item.name}</span>
+                        <span class="text-zinc-500">${item.date}</span>
+                    </div>
+                `).join('');
+            }
+            
+            if(cups >= 5) {
+                document.getElementById('loyalty-msg').innerText = "Hambalyo! Mid BILAASH ah ayaad leedahay.";
+                document.getElementById('loyalty-msg').classList.add('text-green-500');
+            }
+        }
+
+        function openM(t, b, p) {
+            selectedItem = {name: t, price: p};
             document.getElementById('mT').innerText = t;
             document.getElementById('mB').innerText = b;
-            document.getElementById('mF').innerText = f;
+            document.getElementById('mP').innerText = p;
             document.getElementById('modal').style.display = "block";
         }
+
         function closeM() { document.getElementById('modal').style.display = "none"; }
+
+        function executeOrder() {
+            // Update Database
+            points = parseInt(points) + 10;
+            cups = (parseInt(cups) % 5) + 1;
+            
+            const now = new Date().toLocaleDateString();
+            history.unshift({name: selectedItem.name, date: now});
+            if(history.length > 3) history.pop();
+
+            localStorage.setItem('pts', points);
+            localStorage.setItem('cups', cups);
+            localStorage.setItem('history', JSON.stringify(history));
+
+            updateUI();
+
+            // Open WhatsApp
+            const msg = `*DALAB CUSUB: SC COFFE*%0A-----------------%0A*Alaabta:* ${selectedItem.name}%0A*Qiimaha:* ${selectedItem.price}%0A*Bixinta:* WAAFI/EVC Plus%0A-----------------%0AFadlan ii soo diyaari!`;
+            window.open(`https://wa.me/${WHATSAPP_NUM}?text=${msg}`, '_blank');
+            closeM();
+        }
+
+        // Run on start
+        updateUI();
     </script>
 </body>
 </html>
