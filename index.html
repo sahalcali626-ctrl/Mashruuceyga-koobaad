@@ -29,7 +29,7 @@
         </div>
         <div class="flex gap-4 items-center">
             <span class="bg-zinc-900 px-3 py-1 rounded-full text-[10px] border border-zinc-800 text-zinc-400">
-                <i class="fas fa-star text-yellow-500 mr-1"></i> 120 Pts
+                <i class="fas fa-star text-yellow-500 mr-1"></i> <span id="user-pts">120</span> Pts
             </span>
             <i class="fas fa-user-circle text-2xl text-zinc-600"></i>
         </div>
@@ -40,11 +40,11 @@
         <div class="glass p-5 rounded-[2rem] border-t border-white/10 relative overflow-hidden">
             <div class="relative z-10">
                 <p class="text-xs text-zinc-500 font-bold uppercase mb-1">Dhibcahaaga (Loyalty)</p>
-                <h2 class="text-3xl font-black mb-4">4 <span class="text-sm font-normal text-zinc-500">/ 5 Koob</span></h2>
+                <h2 class="text-3xl font-black mb-4"><span id="cup-count">4</span> <span class="text-sm font-normal text-zinc-500">/ 5 Koob</span></h2>
                 <div class="w-full bg-zinc-800 h-2 rounded-full overflow-hidden">
-                    <div class="bg-red-600 h-full w-[80%]"></div>
+                    <div id="progress-bar" class="bg-red-600 h-full w-[80%] transition-all duration-500"></div>
                 </div>
-                <p class="text-[10px] mt-2 text-zinc-400 italic">1 Koob oo kale cab si aad u hesho mid BILAASH ah!</p>
+                <p id="loyalty-msg" class="text-[10px] mt-2 text-zinc-400 italic">1 Koob oo kale cab si aad u hesho mid BILAASH ah!</p>
             </div>
             <div class="absolute -right-5 -bottom-5 text-zinc-900 text-8xl rotate-12"><i class="fas fa-mug-hot"></i></div>
         </div>
@@ -60,8 +60,8 @@
                 <h3 class="font-bold text-sm">WAAFI Payment Ready</h3>
             </div>
             <p class="text-xs text-zinc-500 mb-4">Ku bixi lacagta si fudud adigoo isticmaalaya WAAFI ama EVC Plus.</p>
-            <button class="waafi-btn w-full py-3 rounded-xl text-xs font-bold uppercase flex items-center justify-center gap-2">
-                <i class="fas fa-shield-alt"></i> Ku xir Koontada WAAFI
+            <button onclick="alert('WAAFI waa diyaar!')" class="waafi-btn w-full py-3 rounded-xl text-xs font-bold uppercase flex items-center justify-center gap-2">
+                <i class="fas fa-shield-alt"></i> Koontadaada waa xirantahay
             </button>
         </div>
     </section>
@@ -74,8 +74,8 @@
         </div>
         
         <div class="space-y-4">
-            <!-- Item 1 -->
-            <div onclick="openM('Iced Spanish Latte', 'Condensed milk, espresso & ice.', 'Wuxuu dejiyaa stress-ka maskaxda.')" class="glass p-4 rounded-2xl flex items-center gap-4">
+            <!-- Items loop -->
+            <div onclick="openM('Iced Spanish Latte', 'Condensed milk & espresso.', '$3.50')" class="glass p-4 rounded-2xl flex items-center gap-4 cursor-pointer">
                 <div class="w-16 h-16 bg-zinc-900 rounded-xl flex items-center justify-center text-2xl">🧊</div>
                 <div class="flex-1">
                     <h4 class="font-bold text-sm">Iced Spanish Latte</h4>
@@ -87,8 +87,7 @@
                 </div>
             </div>
 
-            <!-- Item 2 -->
-            <div onclick="openM('Caramel Macchiato', 'Vanilla, steamed milk & caramel.', 'Wuxuu kiciyaa dareenka farxadda.')" class="glass p-4 rounded-2xl flex items-center gap-4">
+            <div onclick="openM('Caramel Macchiato', 'Vanilla & caramel latte.', '$3.50')" class="glass p-4 rounded-2xl flex items-center gap-4 cursor-pointer">
                 <div class="w-16 h-16 bg-zinc-900 rounded-xl flex items-center justify-center text-2xl">🍯</div>
                 <div class="flex-1">
                     <h4 class="font-bold text-sm">Caramel Macchiato</h4>
@@ -102,15 +101,11 @@
         </div>
     </main>
 
-    <!-- Customer Support & Quick Links -->
-    <section class="p-6 grid grid-cols-2 gap-4 mt-4">
-        <div class="glass p-4 rounded-2xl text-center">
-            <i class="fas fa-headset text-red-500 mb-2"></i>
-            <p class="text-[10px] font-bold uppercase">Help Center</p>
-        </div>
-        <div class="glass p-4 rounded-2xl text-center">
-            <i class="fas fa-history text-zinc-500 mb-2"></i>
-            <p class="text-[10px] font-bold uppercase">History</p>
+    <!-- History -->
+    <section class="p-6">
+        <h2 class="text-xs font-bold text-zinc-600 uppercase mb-4 tracking-widest">History-gaaga</h2>
+        <div id="order-history" class="space-y-3">
+            <p class="text-[10px] text-zinc-800 italic text-center">Wali wax dalab ah ma jiraan.</p>
         </div>
     </section>
 
@@ -123,12 +118,11 @@
             <h4 id="mT" class="text-xl font-black mb-2 uppercase"></h4>
             <p id="mB" class="text-zinc-500 text-xs mb-4"></p>
             <div class="bg-zinc-900 p-4 rounded-2xl mb-6">
-                <p class="text-[10px] text-red-500 font-bold uppercase mb-1">Faa'iidada</p>
-                <p id="mF" class="text-sm italic"></p>
+                <p id="mP" class="text-lg font-black text-red-500"></p>
             </div>
             <div class="flex gap-2">
                 <button onclick="closeM()" class="flex-1 bg-zinc-800 py-3 rounded-xl font-bold text-xs">XIR</button>
-                <button class="flex-[2] waafi-btn py-3 rounded-xl font-bold text-xs uppercase flex items-center justify-center gap-2">
+                <button onclick="executeOrder()" class="flex-[2] waafi-btn py-3 rounded-xl font-bold text-xs uppercase flex items-center justify-center gap-2">
                     <i class="fas fa-shopping-cart"></i> Ku bixi WAAFI
                 </button>
             </div>
@@ -147,13 +141,56 @@
     </nav>
 
     <script>
-        function openM(t, b, f) {
+        let selectedItem = {};
+        const CONTACT_WA = "252614909575";
+
+        // Logic & Data
+        function updateUI() {
+            let pts = localStorage.getItem('sc_pts') || 120;
+            let cups = localStorage.getItem('sc_cups') || 4;
+            document.getElementById('user-pts').innerText = pts;
+            document.getElementById('cup-count').innerText = cups;
+            document.getElementById('progress-bar').style.width = (cups * 20) + "%";
+            
+            let hist = JSON.parse(localStorage.getItem('sc_history')) || [];
+            const hDiv = document.getElementById('order-history');
+            if(hist.length > 0) {
+                hDiv.innerHTML = hist.map(i => `
+                    <div class="glass p-3 rounded-xl flex justify-between items-center text-[10px]">
+                        <span class="font-bold">${i.name}</span>
+                        <span class="text-zinc-600">${i.date}</span>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function openM(t, b, p) {
+            selectedItem = {name: t, price: p};
             document.getElementById('mT').innerText = t;
             document.getElementById('mB').innerText = b;
-            document.getElementById('mF').innerText = f;
+            document.getElementById('mP').innerText = p;
             document.getElementById('modal').style.display = "block";
         }
+
         function closeM() { document.getElementById('modal').style.display = "none"; }
+
+        function executeOrder() {
+            let pts = parseInt(localStorage.getItem('sc_pts') || 120) + 10;
+            let cups = (parseInt(localStorage.getItem('sc_cups') || 4) % 5) + 1;
+            let hist = JSON.parse(localStorage.getItem('sc_history')) || [];
+            
+            hist.unshift({name: selectedItem.name, date: new Date().toLocaleDateString()});
+            localStorage.setItem('sc_pts', pts);
+            localStorage.setItem('sc_cups', cups);
+            localStorage.setItem('sc_history', JSON.stringify(hist.slice(0, 3)));
+
+            updateUI();
+            const msg = `Dalab Cusub: ${selectedItem.name} (${selectedItem.price}). Fadlan iigu soo diyaari WAAFI.`;
+            window.open(`https://wa.me/${CONTACT_WA}?text=${encodeURIComponent(msg)}`, '_blank');
+            closeM();
+        }
+
+        updateUI();
     </script>
 </body>
 </html>
