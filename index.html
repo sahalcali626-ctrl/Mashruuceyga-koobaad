@@ -1,45 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="so">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SC Coffe | Mogadishu Hub</title>
+    <title>SC Coffe | Sahal22</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#dc2626">
     <link rel="apple-touch-icon" href="71795.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); }
-        .modal-content { background-color: #111; margin: 15% auto; padding: 30px; border: 1px solid #dc2626; width: 90%; max-width: 500px; border-radius: 20px; text-align: center; }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); }
+        .modal-content { background-color: #0a0a0a; margin: 10% auto; padding: 25px; border: 1px solid #dc2626; width: 90%; max-width: 450px; border-radius: 20px; }
+        .nav-card { background: #111; border: 1px solid #222; padding: 15px; border-radius: 15px; transition: 0.3s; }
+        .nav-card:hover { border-color: #dc2626; }
     </style>
 </head>
-<body class="bg-[#050505] text-white">
-    <section class="py-20 text-center">
-        <h1 class="text-4xl font-black text-red-600 mb-10">SC COFFE MENU</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 max-w-2xl mx-auto">
-            <button onclick="openModal('Espresso', 'Pure coffee beans.', 'Sharpens your focus.')" class="p-4 bg-zinc-900 border border-zinc-800 rounded-xl">1. Espresso</button>
-            <button onclick="openModal('Cappuccino', 'Milk and espresso.', 'Relaxes your mind.')" class="p-4 bg-zinc-900 border border-zinc-800 rounded-xl">2. Cappuccino</button>
+<body class="bg-black text-white font-sans pb-20">
+
+    <!-- Madaxa (Header) -->
+    <header class="p-5 flex justify-between items-center border-b border-zinc-900 sticky top-0 bg-black/80 backdrop-blur-md z-40">
+        <div class="flex items-center gap-3">
+            <img src="71795.png" class="w-10 h-10 rounded-full border border-red-600">
+            <h1 class="text-xl font-black text-red-600 italic">SC COFFE</h1>
+        </div>
+        <div class="flex gap-4">
+            <i class="fas fa-bell text-zinc-500"></i>
+            <i class="fas fa-user-circle text-red-600"></i>
+        </div>
+    </header>
+
+    <!-- Qaybta Delivery-ga -->
+    <section class="p-6">
+        <div class="bg-red-600/10 border border-red-600/30 p-5 rounded-2xl flex justify-between items-center">
+            <div>
+                <h3 class="font-bold text-red-500">Delivery Deg-deg ah!</h3>
+                <p class="text-xs text-zinc-400">Dalbo hadda, 15 daqiiqo kuugu imow.</p>
+            </div>
+            <button onclick="window.location.href='https://wa.me/252614909575'" class="bg-red-600 px-4 py-2 rounded-lg text-xs font-bold uppercase">Dalbo</button>
         </div>
     </section>
 
-    <div id="infoModal" class="modal">
+    <!-- Menu-ga (10 Nooc) -->
+    <main class="px-6">
+        <h2 class="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-4">Menu-ga Kafeega</h2>
+        <div class="grid grid-cols-1 gap-3">
+            <button onclick="openM('Espresso', 'Digir madow oo saafi ah.', 'Si degdeg ah ayuu maskaxda u kiciyaa.')" class="nav-card flex justify-between items-center">
+                <div class="flex items-center gap-3"><i class="fas fa-coffee text-red-600"></i> 1. Espresso</div>
+                <span class="text-red-500 font-bold">$1.50</span>
+            </button>
+            <button onclick="openM('Cappuccino', 'Caano iyo espresso.', 'Wuxuu dejiyaa neerfaha maskaxda.')" class="nav-card flex justify-between items-center">
+                <div class="flex items-center gap-3"><i class="fas fa-mug-hot text-red-600"></i> 2. Cappuccino</div>
+                <span class="text-red-500 font-bold">$2.50</span>
+            </button>
+            <button onclick="openM('Iced Spanish Latte', 'Caano macaan & baraf.', 'Stress-ka ayuu dilaa, maskaxdana qaboojiyaa.')" class="nav-card flex justify-between items-center">
+                <div class="flex items-center gap-3"><i class="fas fa-glass-whiskey text-blue-400"></i> 3. Iced Spanish</div>
+                <span class="text-red-500 font-bold">$3.50</span>
+            </button>
+            <button onclick="openM('Americano', 'Biyo kulul & espresso.', 'Cabsida maskaxda ayuu ka saaraa.')" class="nav-card flex justify-between items-center">
+                <div class="flex items-center gap-3"><i class="fas fa-coffee text-zinc-500"></i> 4. Americano</div>
+                <span class="text-red-500 font-bold">$1.50</span>
+            </button>
+            <button onclick="openM('Mocha', 'Shukulaato & espresso.', 'Wuxuu kiciya hormoonka farxadda.')" class="nav-card flex justify-between items-center">
+                <div class="flex items-center gap-3"><i class="fas fa-cookie text-red-600"></i> 5. Caffe Mocha</div>
+                <span class="text-red-500 font-bold">$3.00</span>
+            </button>
+        </div>
+
+        <!-- Qaybaha Cusub -->
+        <h2 class="text-sm font-bold text-zinc-500 uppercase tracking-widest mt-10 mb-4">Maamulka Koontada</h2>
+        <div class="grid grid-cols-2 gap-3">
+            <div class="nav-card text-center py-6">
+                <i class="fas fa-cog text-2xl text-zinc-500 mb-2"></i>
+                <p class="text-[10px] uppercase font-bold text-zinc-300">Settings</p>
+            </div>
+            <div class="nav-card text-center py-6">
+                <i class="fas fa-history text-2xl text-zinc-500 mb-2"></i>
+                <p class="text-[10px] uppercase font-bold text-zinc-300">Payments</p>
+            </div>
+            <div class="nav-card text-center py-6">
+                <i class="fas fa-user-plus text-2xl text-zinc-500 mb-2"></i>
+                <p class="text-[10px] uppercase font-bold text-zinc-300">Invite Friends</p>
+            </div>
+            <div class="nav-card text-center py-6">
+                <i class="fas fa-headset text-2xl text-zinc-500 mb-2"></i>
+                <p class="text-[10px] uppercase font-bold text-zinc-300">Help & Support</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal (Daaqadda Faahfaahinta) -->
+    <div id="modal" class="modal">
         <div class="modal-content">
-            <h4 id="modalTitle" class="text-xl text-red-600 font-bold mb-2"></h4>
-            <p id="modalBody" class="mb-2"></p>
-            <p id="modalBenefit" class="italic text-gray-400 text-sm"></p>
-            <button onclick="closeModal()" class="mt-4 bg-red-600 px-4 py-2 rounded">Close</button>
+            <h4 id="mT" class="text-2xl font-bold text-red-600 mb-4 uppercase italic text-center"></h4>
+            <div class="space-y-4">
+                <p class="text-zinc-400 text-sm"><span class="text-white font-bold">Waxa uu ka kooban yahay:</span> <br><span id="mB"></span></p>
+                <div class="bg-zinc-900 p-4 rounded-xl border-l-4 border-red-600">
+                    <p class="text-xs text-red-500 font-bold uppercase mb-1">Faa'iidada Maskaxda</p>
+                    <p id="mF" class="text-sm italic text-white"></p>
+                </div>
+            </div>
+            <button onclick="closeM()" class="mt-8 w-full bg-zinc-800 text-white py-3 rounded-xl font-bold uppercase text-xs hover:bg-red-600 transition">Xir Daaqadda</button>
         </div>
     </div>
 
+    <!-- Menu-ga Hoose -->
+    <nav class="fixed bottom-0 w-full bg-zinc-950 border-t border-zinc-900 p-4 flex justify-around items-center z-50">
+        <i class="fas fa-home text-red-600 text-xl"></i>
+        <i class="fas fa-search text-zinc-600 text-xl"></i>
+        <div class="bg-red-600 w-12 h-12 rounded-full flex items-center justify-center -mt-10 border-4 border-black shadow-lg shadow-red-600/20">
+            <i class="fas fa-plus text-white"></i>
+        </div>
+        <i class="fas fa-shopping-cart text-zinc-600 text-xl"></i>
+        <i class="fas fa-user text-zinc-600 text-xl"></i>
+    </nav>
+
     <script>
-        function openModal(t, b, f) {
-            document.getElementById('modalTitle').innerText = t;
-            document.getElementById('modalBody').innerText = b;
-            document.getElementById('modalBenefit').innerText = f;
-            document.getElementById('infoModal').style.display = "block";
+        function openM(t, b, f) {
+            document.getElementById('mT').innerText = t;
+            document.getElementById('mB').innerText = b;
+            document.getElementById('mF').innerText = f;
+            document.getElementById('modal').style.display = "block";
         }
-        function closeModal() { document.getElementById('infoModal').style.display = "none"; }
+        function closeM() { document.getElementById('modal').style.display = "none"; }
     </script>
 </body>
 </html>
